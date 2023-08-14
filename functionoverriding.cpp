@@ -9,6 +9,7 @@ protected:
   Shape(int len, int bdt){
     length = len;
     breadth = bdt;
+   
   }
    virtual void calc(){
     cout<<length*breadth<<endl;
@@ -18,7 +19,7 @@ protected:
 class Rectangle : public Shape{
      public:
         
-      Rectangle(int len, int bdt): Shape(len, bdt){};
+      Rectangle(int len, int bdt): Shape(len, bdt){}
   void calc()override{
     cout<<"function overriding"<<endl;;
     cout<<length*breadth<<endl;
@@ -27,9 +28,8 @@ class Rectangle : public Shape{
 
 int main (){
     
-     Rectangle rec(4,2);
+     Rectangle rec(4,7);
      rec.calc();
-     Shape shp(2,2);
-     shp.calc();
+   
     return 0;
 }
