@@ -23,12 +23,10 @@ private:
 public:
     Centimeter(double cm) : centimeters(cm) {}
 
-    double getCentimeters() const {
-        return centimeters;
-    }
+
 
     // Conversion operator from Centimeter to Meter
-    operator Meter() const {
+    operator Meter() {
         double meters = centimeters / 100.0;
         return Meter(meters);
     }

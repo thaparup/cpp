@@ -1,31 +1,34 @@
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-class MyClass{
-
+class MyClass {
 private:
-int value;
-public:
-MyClass(int val): value(val){};
-void printvalue(){
+    int value;
 
-   cout<<this->value<<endl;
-}
-  void setValue(int v){
-    this->value = v;
-  }
-  MyClass* getpointer(){
-    return this;
-  }
+public:
+    MyClass(int val) : value(val) {}
+
+    void printValue() {
+        cout << this->value << endl;
+    }
+
+    void setValue(int v) {
+        this->value = v;
+    }
+
+    MyClass* getPointer() {
+        return this;
+    }
 };
 
-int main (){
-
+int main() {
     MyClass obj(2);
-    obj.printvalue();
-    obj.setValue(46);
-    obj.printvalue();
-    MyClass *ptr = obj.getpointer();
-    ptr->printvalue();
+
+    obj.setValue(44);
+    obj.printValue();
+
+    MyClass* ptr = obj.getPointer();
+    ptr->printValue();
+
     return 0;
 }

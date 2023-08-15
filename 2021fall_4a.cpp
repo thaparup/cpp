@@ -10,7 +10,7 @@ class Count {
    public:
 
    
-    Count() : value(5) {}
+    Count(int x) : value(x) {}
 
     // Overload ++ when used as prefix
     void operator ++ () {
@@ -23,7 +23,7 @@ class Count {
 };
 
 int main() {
-    Count count1;
+    Count count1(6);
      
     // Call the "void operator ++ ()" function
     ++count1;

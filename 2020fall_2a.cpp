@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>;
 using namespace std;
 
 
@@ -7,10 +7,10 @@ class Car{
     string brand, model;
     public:
     Car(string a, string b): brand(a), model(b){
-        cout<<"Object created"<<endl;
+        cout<<"Object created";
     };
     ~Car(){
-        cout<< "Objects deleted"<<endl;
+        cout<< "Objects deletd";
     }
 };
 

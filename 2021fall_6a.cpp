@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void test(int x){
+void test(int x ){
    try{
     if (x ==0){
         throw "The value of x must not be 0";
@@ -9,7 +9,9 @@ void test(int x){
     else if(x<0){
         throw "the value of x must not  be less than 0";
     }
-
+    else{
+       cout<<"The value of x is neither zero nor less than zero";
+    }
    }
    catch(const char* errorMsg){
     cout<<errorMsg<<endl;
@@ -24,6 +26,6 @@ void test(int x){
 
 int main(){
 
-      test(0);
+      test(4);
     return 0;
 }

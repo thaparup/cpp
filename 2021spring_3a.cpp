@@ -16,7 +16,7 @@ class ParentB{
     int valueB;
 
     public:
-    ParentB(int x): valueB(x){cout<<"The value of parentB is "<<valueB<<endl;}
+    ParentB(int x): valueB(x){cout<<"The value of parent B is "<<valueB<<endl;}
  
 };
 
@@ -30,7 +30,7 @@ class Derived: public ParentA, public ParentB{
 int main (){
 
 
-    Derived derived(32 );
+    Derived derived(32);
   
     return 0;
 }

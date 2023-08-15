@@ -20,7 +20,7 @@ class Complex{
 int main(){
 
     Complex com(12,12);
-    Complex com2(12,12);
+    Complex com2(12,19);
     Complex com3 = com + com2;
     com3.display();
     

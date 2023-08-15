@@ -1,20 +1,27 @@
 #include <iostream>
 using namespace std;
 
+
+template <typename T>
+T addition(T x){
+  // cout<< "The value of single parameter template function is "<<z<<endl;
+  return x;
+}
 template <typename T>  
-T addtion(T x, T y){
+T addition(T x, T y){
   return x +y;
 }
-template <typename T>
-T addString(T x, T y){
-    return x + y;
-}
+
+
 
 int main (){
-
-    cout<<addtion <int>(4,4)<<endl;
-    cout<<addtion <double>(3.3, 5.9)<<endl;
-    cout<<addString <string>("Peter ", "Parker");
+    cout<< addition <int>(4);
+    cout<<addition <string>("Peter Parker");
+    addition <double>(3.3);
+    
+    cout<<addition <int>(4,4)<<endl;
+    cout<<addition <double>(3.3, 5.9)<<endl;
+    cout<<addition <string>("Peter ", "Parker");
 }
 
 

@@ -6,8 +6,8 @@ class MyObject{
     private: 
     int x;
     public:
-    MyObject(){
-        x = 10;
+    MyObject(int y ){
+        x = y;
         cout<<"Objects created "<<x<<endl;
     }
     ~MyObject(){
@@ -18,7 +18,7 @@ class MyObject{
 
 int main (){
 
-    MyObject* object = new MyObject();  //Creating a dynamic object of type MyObject
+    MyObject* object = new MyObject(5);  //Creating a dynamic object of type MyObject
     delete object;
 
     return 0;

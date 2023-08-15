@@ -1,45 +1,41 @@
 #include <iostream>
 using namespace std;
+ 
 
-class classA{
+ class classB;
+ class classA{
  private:
- int num;
+ int numA;
  public:
-  friend int addA(classA obj);
+ classA(int x): numA(x){};
+  friend int friendFunc(classA objA  , classB objB);
   void getInputA(int n){
-    num = n;
+    numA = n;
   }
 
   
 };
+
 class classB{
  private:
- int num;
+ int numB;
  public:
-  friend int addB(classB obj);
-  void getInputB(int n){
-    num = n;
-  }
+ classB(int x ): numB(x){};
+  friend int friendFunc(classA objA,classB objB);
+ 
 
   
 };
 
- int addA(classA obj){
-     return obj.num;
- }
-
- int addB(classB obj){
-    return obj.num;
- }
-
-
+int friendFunc  (classA objA,classB objB ){
+   return objA.numA + objB.numB; 
+}
 int main(){
 
-     classA obj1;
-    obj1.getInputA(20);
-    classB obj2;
-    obj2.getInputB(20);
-    int result = addA(obj1) + addB(obj2);
-    cout<<result<<endl;
+     
+     classA obj1(12);
+     classB obj2(12);
+     int result = friendFunc(obj1, obj2);
+     cout<<result;
     return 0;
 }

@@ -14,7 +14,7 @@ class Derived: public Base{
    private:
    int derivednumber;
    public: 
-   Derived(int a , int b ): derivednumber(a), Base(b) {
+   Derived(int a  ): derivednumber(a), Base(a) {
     cout<<"derived "<<derivednumber<<endl;
    
    };
@@ -24,6 +24,6 @@ class Derived: public Base{
 int main (){
 
 
-    Derived der(20, 30);  
+    Derived der(20);  
     return 0;
 }

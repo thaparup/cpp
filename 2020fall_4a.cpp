@@ -18,5 +18,7 @@ int main(){
     int number = 10; 
     Class_A obj = number;
     obj.display();
+    Class_A obj1(111);
+    obj1.display();
     return 0;
 }
